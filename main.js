@@ -87,12 +87,12 @@ function timeBlock() {
     $('#one').append(hourOne)
     $('#one').text(hourOne)
 
-    if (moment().isAfter(hourTwelve, 'hour')) {
+    if (moment().isAfter(hourOne, 'hour')) {
         $(".time-block-one").addClass("past");
         $(".time-block-one").removeClass("present");
         $(".time-block-one").removeClass("future");
         
-    } else if (moment().isBefore(hourNine, 'hour')) {
+    } else if (moment().isBefore(hourOne, 'hour')) {
         $(".time-block-one").removeClass("past");
         $(".time-block-one").removeClass("present");
         $(".time-block-one").addClass("future");
@@ -175,7 +175,7 @@ function timeBlock() {
     } else {
         $(".time-block-five").removeClass("past");
         $(".time-block-five").addClass("present");
-        $(".time-block-f").removeClass("future");
+        $(".time-block-five").removeClass("future");
     }
 }
 timeBlock()
