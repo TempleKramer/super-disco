@@ -180,15 +180,56 @@ function timeBlock() {
 }
 timeBlock()
 
-const textInput = document.getElementById("text");
-const buttonSave = document.getElementsByClassName("saveBtn")
+// var textInput = document.getElementById(".text")
 
-buttonSave.onclick = function() {
-    const text = textInput
+// function saveText() {
+//     localStorage.setItem("textInput", JSON.stringify(textInput))
+//     console.log()
+// }
+
+// saveText()
+
+
+
+var saveButton = $(".saveBtn")
+var saveText = $("<button>")
+
+
+
+
+$(".saveBtn").on("click", function() {
+    var textInput = $(this)
+.find("text-5")
+.text()
+.trim()
+console.log(textInput)
+})
+
+
+
+
+//}
+// var textInput = $("#text")
+// .find("textarea")
+// .text()
+// .trim()
+// console.log(textInput)
+
+
+// CANT FIGURE OUT HOW TO SAVE TO LOCAL FILES :(
+
+
+
+
+//var buttonSave = document.getElementsByClassName("saveBtn")
+
+// buttonSave.onclick = function() {
+//     var text = textInput
     
-    if (textInput) {
-        localStorage.setItem(json.stringify(textInput))
-        location.reload
-    }
-}
+//     if (textInput) {
+//         localStorage.setItem(JSON.stringify(textInput))
+//         location.reload
+        
+//     }
+// }
 
